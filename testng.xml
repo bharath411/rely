@@ -1,11 +1,6 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Rely" verbose="1" >
   <test name="Basic" >
-  	<groups>
-  		<run>
-  			<include name="smoke"></include>
-  		</run>
-  	</groups>
    	<packages>
    		<package name="com.rely"></package>
    		<package name="com.rely2"></package>
