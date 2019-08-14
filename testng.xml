@@ -1,9 +1,24 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Rely" verbose="1" >
   <test name="Basic" >
-   	<packages>
-   		<package name="com.rely"></package>
-   		<package name="com.rely2"></package>
-   	</packages>
+  <groups>
+  	<run>
+  		<include name="smoke"></include>
+  	</run>
+  
+  </groups>
+  
+	<classes>
+		<class name="com.rely.ExampleTest5">
+			<methods>
+				<include name="verifyProfile"></include>
+			</methods>
+		</class>
+		<class name="com.rely2.ExampleTest6">
+			<methods>
+				<exclude name="searchProduct"></exclude>
+			</methods>
+		</class>
+	</classes>
   </test>
 </suite>
