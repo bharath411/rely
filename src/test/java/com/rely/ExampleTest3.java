@@ -43,7 +43,7 @@ public class ExampleTest3 {
 		
 	}
 	
-	@BeforeMethod
+	@BeforeMethod(groups= {"srs"})
 	public void launchBrowser() {
 		System.out.println("Browser launched");
 	}
