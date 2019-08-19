@@ -20,7 +20,6 @@ public class ListExample {
 		list.add("eeee");
 		list.add("wwww");
 		
-		
 		int number = list.size();
 		
 		String st = list.get(4);

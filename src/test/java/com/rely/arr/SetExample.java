@@ -21,6 +21,8 @@ public class SetExample {
 			System.out.println(s);
 		}
 		
+		set.add(null);
+		
 		set.remove("bharath");
 	
 		
