@@ -16,41 +16,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class TestProduct {
+public class TestProduct extends BaseTest{
 
-	String browser = "chrome";
-	WebDriver driver = null;
-	String url = "";
-	
-	
-	@BeforeMethod
-	public void launchBrowser() {
-
-		if (browser.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "C:\\Bharath\\Personal\\selenium-jars\\chromedriver.exe");
-			driver = new ChromeDriver();
-		} else if (browser.equals("firefox")) {
-			System.setProperty("webdriver.gecko.driver", "C:\\Bharath\\Personal\\selenium-jars\\geckodriver.exe");
-			driver = new FirefoxDriver();
-		} else if (browser.equals("ie")) {
-			System.setProperty("webdriver.ie.driver", "C:\\Bharath\\Personal\\selenium-jars\\InternetExplorer.exe");
-			driver = new InternetExplorerDriver();
-		} else {
-			Assert.fail("browser doesn't match");
-		}
-
-		// Waiting synchronization
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		url = "https://demo.opencart.com";
-		driver.get(url);
-	}
-	
-	@AfterMethod
-	public void tearDown() {
-		//driver.quit();
-		//driver.close();
-	}
-	
 	
 	public void search(String product) {
 		driver.findElement(By.name("search")).sendKeys(product);
