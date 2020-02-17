@@ -1,6 +1,6 @@
 package com.rely2;
 
-import org.testng.annotations.AfterSuite;
+
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
@@ -17,6 +17,14 @@ public class ExampleTest7 {
 	@BeforeSuite
 	public void beforeSuite() {
 		System.out.println("I am before suite method");
+	}
+	
+	@Test(groups= {"regression"})
+	public void searchNewItem() {
+		// Search Product
+		// Click on Product
+		System.out.println("searchProduct");
+		// Verify Product
 	}
 	
 	
